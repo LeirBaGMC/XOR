@@ -10,19 +10,7 @@ El programa:
 - Aplica la operación XOR entre cada carácter del texto y su correspondiente bit de la clave.
 - Muestra la clave utilizada y el texto cifrado resultante.
 
-## Código de ejemplo
 
-```python
-import random
-
-def xor(text, key):   
-    enc = [ord(text[i]) ^ key[i] for i in range(len(text))]
-    print("Clave:", key)
-    print("Cifrado:", ''.join(chr(b) for b in enc))
-
-clave_aleatoria = [random.randint(0, 1) for _ in range(len("hola"))]
-xor("hola", clave_aleatoria)
-Uso
 Cambia la cadena "hola" por el texto que deseas cifrar.
 
 Ejecuta el script.
@@ -33,3 +21,4 @@ Notas
 La clave debe tener la misma longitud que el texto.
 
 Este cifrado es muy básico y no es seguro para uso real, solo fines educativos.
+
