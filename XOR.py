@@ -1,5 +1,14 @@
-def xor(text, key):
-    enc = [ord(text[i]) ^ key[i] for i in range(len(text))]
-    print("Cifrado:", ''.join(chr(b) for b in enc))
+def xor_encryption(text, key):
+    encrypted_text = ""
+    
+    for i in range(len(text)):
+        encrypted_text += chr(ord(text[i]) ^ ord(key[i]))
+    
+    return encrypted_text
 
-xor("hola", [1, 0, 1, 0])
+
+plain_text = "Educative Accelerates Developer Productivity"
+key = "Edu_key"
+
+encrypted_text = xor_encryption(plain_text, key)
+print(f'Encrypted Text: {encrypted_text}')
